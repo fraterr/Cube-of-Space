@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64">
+  <rect width="100" height="100" rx="16" fill="#0d0d12"/>
+  <g fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer Hexagon (cube projection) -->
+    <path d="M50 10 L85 30 V70 L50 90 L15 70 V30 Z" stroke-opacity="0.85"/>
+    <!-- Internal Y structure -->
+    <path d="M50 50 L50 90" stroke-opacity="0.85"/>
+    <path d="M50 50 L15 30" stroke-opacity="0.85"/>
+    <path d="M50 50 L85 30" stroke-opacity="0.85"/>
+    <!-- Inner cube top edge hint -->
+    <path d="M15 30 L50 10 L85 30" stroke-opacity="0.4" stroke-dasharray="2 2"/>
+  </g>
+  <!-- Hebrew Letters -->
+  <text x="50" y="35" text-anchor="middle" dominant-baseline="central"
+    fill="#eab308" font-size="18" font-family="serif" opacity="0.8">ב</text>
+  <text x="33" y="63" text-anchor="middle" dominant-baseline="central"
+    fill="#eab308" font-size="18" font-family="serif" opacity="0.8">כ</text>
+  <text x="67" y="63" text-anchor="middle" dominant-baseline="central"
+    fill="#eab308" font-size="18" font-family="serif" opacity="0.8">ר</text>
+</svg>

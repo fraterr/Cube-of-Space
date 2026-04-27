@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'HebrewFont';
+  src: url('/hebrew.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  background-color: #111111;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0d0d0d;
+}
+
+.hebrew-text {
+  font-family: 'HebrewFont', sans-serif;
+}
+
+/* Glassmorphism sidebar */
+.glass-panel {
+  background: rgba(20, 20, 25, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -8px 0 32px 0 rgba(0, 0, 0, 0.5);
+}

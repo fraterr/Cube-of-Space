@@ -17,6 +17,7 @@ function App() {
   const [showHelp, setShowHelp] = useState(false);
   const [resetCamera, setResetCamera] = useState(0);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [westernViewActive, setWesternViewActive] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}res/data.json`)
@@ -112,11 +113,18 @@ function App() {
 
             {/* Ritual View Reset */}
             <button
-              onClick={() => setResetCamera(c => c + 1)}
-              className="flex-1 flex items-center justify-center space-x-2 px-4 py-2.5 bg-black/50 hover:bg-white/10 border border-white/10 rounded-full text-white/70 hover:text-white transition-all duration-300 backdrop-blur-xl group"
-              title="Reset to Western View (Paul Foster Case)"
+              onClick={() => {
+                setResetCamera(c => c + 1);
+                setWesternViewActive(!westernViewActive);
+              }}
+              className={`flex-1 flex items-center justify-center space-x-2 px-4 py-2.5 border rounded-full transition-all duration-300 backdrop-blur-xl group ${
+                westernViewActive 
+                  ? 'bg-violet-500/30 border-violet-500/60 text-violet-200 shadow-[0_0_20px_rgba(139,92,246,0.4)]' 
+                  : 'bg-black/50 hover:bg-white/10 border-white/10 text-white/70 hover:text-white'
+              }`}
+              title="Toggle Western View (Paul Foster Case)"
             >
-              <Eye size={14} className="text-white/40 group-hover:text-violet-400 transition-colors" />
+              <Eye size={14} className={`transition-colors ${westernViewActive ? 'text-violet-400' : 'text-white/40 group-hover:text-violet-400'}`} />
               <span className="text-[10px] uppercase tracking-[0.15em] font-semibold">Western View</span>
             </button>
           </div>
